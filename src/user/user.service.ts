@@ -36,11 +36,13 @@ export class UserService {
     return await this.userRepo.findOne({
       where: { id },
       select: [
+        'id',
         'firstName',
         'lastName',
         'email',
         'avatarUrl',
         'hashedRefreshToken',
+        'role',
       ],
     });
   }
